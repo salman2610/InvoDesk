@@ -286,7 +286,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Link to 7-Day Free Pass Landing & App Downloads */}
         <a
-          href="/landing"
+          href="/"
           className="btn btn-outline btn-sm"
           style={{
             padding: '6px 10px',
