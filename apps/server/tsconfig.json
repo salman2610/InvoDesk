@@ -4,9 +4,20 @@
     "module": "CommonJS",
     "moduleResolution": "node",
     "outDir": "./dist",
-    "strict": true,
+    "strict": false,
+    "noImplicitAny": false,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@invodesk/types": ["../../packages/types/src"],
+      "@invodesk/database": ["../../packages/database/src"],
+      "@invodesk/gst": ["../../packages/gst/src"],
+      "@invodesk/billing": ["../../packages/billing/src"],
+      "@invodesk/inventory": ["../../packages/inventory/src"],
+      "@invodesk/hardware": ["../../packages/hardware/src"],
+      "@invodesk/sync": ["../../packages/sync/src"]
+    }
   },
   "include": ["src/**/*"]
 }

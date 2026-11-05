@@ -1156,7 +1156,7 @@ fastify.post('/api/sync/push', { preHandler: verifyAuth }, async (req) => {
               unitPrice,
               discountPercent: it.discountPercent ?? 0,
               discountAmount: it.discountAmount ?? 0,
-              taxableAmount: it.taxableAmount ?? (unitPrice * it.quantity),
+              taxableAmount: it.taxableAmount ?? (Number(unitPrice) * it.quantity),
               gstRate: it.gstRate ?? p?.gstRate ?? 18,
               isInterState: it.isInterState || false,
               cgstRate: it.cgstRate ?? 0,
@@ -1166,7 +1166,7 @@ fastify.post('/api/sync/push', { preHandler: verifyAuth }, async (req) => {
               igstRate: it.igstRate ?? 0,
               igstAmount: it.igstAmount ?? 0,
               cessAmount: it.cessAmount ?? 0,
-              totalAmount: it.totalAmount ?? (unitPrice * it.quantity)
+              totalAmount: it.totalAmount ?? (Number(unitPrice) * it.quantity)
             });
           }
 
