@@ -1,0 +1,25 @@
+{
+  "name": "invodesk-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "InvoDesk - Cross-Platform Billing & Business Management Platform",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "dev:server": "npm run dev --workspace=@invodesk/server",
+    "dev:web": "npm run dev --workspace=@invodesk/web",
+    "build": "npm run build --workspaces --if-present",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "app-builder-bin": "^5.0.0-alpha.10",
+    "concurrently": "^9.1.2",
+    "electron": "33.4.11",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.7.2",
+    "vitest": "^5.0.5"
+  }
+}

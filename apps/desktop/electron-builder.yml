@@ -1,0 +1,36 @@
+appId: com.invodesk.pos
+productName: InvoDeskPOS
+executableName: invodesk-pos
+artifactName: ${productName}-${version}-${os}-${arch}.${ext}
+electronVersion: 45.2.1
+directories:
+  output: release
+  buildResources: build
+files:
+  - dist/**/*
+  - package.json
+deb:
+  packageName: invodesk-pos
+  afterInstall: build/after-install.sh
+linux:
+  icon: build/icons
+  target:
+    - AppImage
+    - deb
+  category: Office;Finance;
+  synopsis: InvoDesk Native Retail POS Counter
+  description: Offline-first GST Retail Billing & POS Counter with Thermal Printing and Hardware Integration
+win:
+  icon: build/icon.ico
+  signAndEditExecutable: false
+  target:
+    - zip
+    - portable
+  publisherName: InvoDesk Inc.
+mac:
+  icon: build/icon.icns
+  category: public.app-category.finance
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always

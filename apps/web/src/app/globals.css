@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+/* =====================================================================
+   InvoDesk Brand Identity & Design System Tokens
+   Brand Colors:
+   - Primary Emerald:   #166B50
+   - Accent Green:      #22C55E
+   - Main Text:         #172B25
+   - Secondary Text:    #64746C
+   - Background:        #F5F7F6
+   - Surface:           #FFFFFF
+   ===================================================================== */
+
+:root,
+[data-theme="light"] {
+  /* Brand Constants */
+  --brand-emerald: #166B50;
+  --brand-emerald-dark: #166B50;
+  --brand-accent: #22C55E;
+  --brand-accent-hover: #16A34A;
+  --brand-emerald-hover: #12543E;
+  --brand-emerald-light: rgba(22, 107, 80, 0.08);
+  --brand-emerald-glow: rgba(34, 197, 94, 0.2);
+  --accent-cyan: #166B50;
+
+  /* Surfaces & Backgrounds (Light-first default) */
+  --bg-primary: #F5F7F6;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #EEF2F0;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAF9;
+  --bg-elevated: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.88);
+  --bg-nav: rgba(255, 255, 255, 0.92);
+
+  /* Borders */
+  --border-subtle: #E2E8F0;
+  --border-medium: #CBD5E1;
+  --border-focus: #166B50;
+  --border-brand: rgba(22, 107, 80, 0.25);
+
+  /* Primary Action */
+  --accent-primary: #166B50;
+  --accent-primary-hover: #12543E;
+  --accent-primary-text: #FFFFFF;
+  --accent-success: #166B50;
+  --accent-success-bright: #22C55E;
+  --accent-success-glow: rgba(34, 197, 94, 0.2);
+  --accent-warning: #D97706;
+  --accent-danger: #DC2626;
+  --accent-info: #0284C7;
+
+  /* Typography */
+  --text-main: #172B25;
+  --text-primary: #172B25;
+  --text-secondary: #64746C;
+  --text-muted: #8FA097;
+  --text-inverse: #FFFFFF;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(23, 43, 37, 0.06), 0 1px 2px rgba(23, 43, 37, 0.04);
+  --shadow-md: 0 4px 8px -1px rgba(23, 43, 37, 0.08), 0 2px 4px -2px rgba(23, 43, 37, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(23, 43, 37, 0.1), 0 4px 6px -4px rgba(23, 43, 37, 0.04);
+  --shadow-glow: 0 0 20px rgba(34, 197, 94, 0.25);
+
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', var(--font-main);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+}
+
+/* Optional Carefully Designed Charcoal Dark Theme */
+[data-theme="dark"] {
+  --brand-emerald: #166B50;
+  --brand-emerald-dark: #22C55E;
+  --brand-accent: #22C55E;
+  --brand-accent-hover: #4ADE80;
+  --brand-emerald-hover: #1D8A68;
+  --brand-emerald-light: rgba(34, 197, 94, 0.12);
+  --brand-emerald-glow: rgba(34, 197, 94, 0.3);
+  --accent-cyan: #22C55E;
+
+  /* Deep charcoal background with forest/emerald undertone */
+  --bg-primary: #0D1612;
+  --bg-secondary: #13221C;
+  --bg-tertiary: #192C24;
+  --bg-card: #13221C;
+  --bg-card-hover: #1A2E26;
+  --bg-elevated: #1F362D;
+  --bg-glass: rgba(19, 34, 28, 0.88);
+  --bg-nav: rgba(13, 22, 18, 0.94);
+
+  /* Subtle dark borders */
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.16);
+  --border-focus: #22C55E;
+  --border-brand: rgba(34, 197, 94, 0.3);
+
+  /* Primary Action */
+  --accent-primary: #166B50;
+  --accent-primary-hover: #1D8A68;
+  --accent-primary-text: #FFFFFF;
+  --accent-success: #22C55E;
+  --accent-success-bright: #4ADE80;
+  --accent-success-glow: rgba(34, 197, 94, 0.25);
+  --accent-warning: #F59E0B;
+  --accent-danger: #EF4444;
+  --accent-info: #38BDF8;
+
+  /* Typography */
+  --text-main: #F5F7F6;
+  --text-primary: #F5F7F6;
+  --text-secondary: #9EB3A8;
+  --text-muted: #687E73;
+  --text-inverse: #0D1612;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 25px rgba(34, 197, 94, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Glassmorphism & Panel Utilities */
+.glass-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.glass-nav {
+  background: var(--bg-nav);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--brand-emerald);
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(22, 107, 80, 0.25);
+}
+.btn-primary:hover {
+  background: var(--brand-emerald-hover);
+  box-shadow: 0 4px 12px rgba(22, 107, 80, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #166B50 0%, #10B981 100%);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+.btn-success:hover {
+  background: linear-gradient(135deg, #12543E 0%, #059669 100%);
+  box-shadow: 0 4px 14px rgba(34, 197, 94, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+}
+.btn-outline:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--border-medium);
+  color: var(--text-main);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+}
+.btn-ghost:hover {
+  background: var(--brand-emerald-light);
+  color: var(--brand-emerald);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  border-radius: var(--radius-sm);
+}
+
+.btn-lg {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.725rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+}
+
+.badge-success {
+  background: rgba(34, 197, 94, 0.12);
+  color: #166B50;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+[data-theme="dark"] .badge-success {
+  color: #4ADE80;
+}
+
+.badge-warning {
+  background: rgba(217, 119, 6, 0.12);
+  color: #B45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+[data-theme="dark"] .badge-warning {
+  color: #FBBF24;
+}
+
+.badge-danger {
+  background: rgba(220, 38, 38, 0.12);
+  color: #DC2626;
+  border: 1px solid rgba(220, 38, 38, 0.25);
+}
+[data-theme="dark"] .badge-danger {
+  color: #F87171;
+}
+
+.badge-indigo {
+  background: rgba(22, 107, 80, 0.12);
+  color: #166B50;
+  border: 1px solid rgba(22, 107, 80, 0.25);
+}
+[data-theme="dark"] .badge-indigo {
+  color: #34D399;
+}
+
+/* Inputs & Form Elements */
+.input-field {
+  width: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  color: var(--text-main);
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.input-field:focus {
+  border-color: var(--brand-emerald);
+  box-shadow: 0 0 0 3px var(--brand-emerald-light);
+}
+
+.input-field::placeholder {
+  color: var(--text-muted);
+}
+
+/* Modal Backdrop */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 20, 0.65);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.18s ease-out;
+}
+
+.modal-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: scaleUp 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  color: var(--text-main);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Tables */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.data-table th {
+  padding: 12px 16px;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border-subtle);
+  text-transform: uppercase;
+  font-size: 0.725rem;
+  letter-spacing: 0.05em;
+}
+
+.data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-main);
+}
+
+.data-table tr:hover td {
+  background: var(--bg-card-hover);
+}
+
+/* Print Specific Rules for Thermal Slip and GST Invoice */
+@media print {
+  @page {
+    margin: 8mm;
+    size: auto;
+  }
+
+  header, nav, main, footer, .no-print {
+    display: none !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .modal-overlay {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    backdrop-filter: none !important;
+    z-index: 999999 !important;
+    overflow: visible !important;
+  }
+
+  .modal-content {
+    border: none !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    max-height: none !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    animation: none !important;
+  }
+
+  .invoice-paper-wrapper {
+    padding: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+  }
+
+  .a4-tax-invoice-sheet {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 6mm !important;
+    border: 2px solid #000000 !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    page-break-inside: avoid !important;
+  }
+
+  .thermal-receipt-sheet {
+    width: 78mm !important;
+    max-width: 78mm !important;
+    margin: 0 auto !important;
+    padding: 4mm !important;
+    border: 1px dashed #000000 !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    page-break-inside: avoid !important;
+  }
+}

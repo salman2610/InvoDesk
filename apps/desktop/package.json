@@ -1,0 +1,29 @@
+{
+  "name": "@invodesk/desktop",
+  "version": "1.0.0",
+  "description": "InvoDesk Native Retail POS Counter with Offline-First Engine",
+  "author": "InvoDesk Inc. <support@invodesk.in>",
+  "homepage": "https://invodesk.in",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc && env -u ELECTRON_RUN_AS_NODE electron --no-sandbox dist/main.js",
+    "pack": "npm run build && electron-builder --dir",
+    "dist:linux": "npm run build && electron-builder --linux",
+    "dist:win": "npm run build && electron-builder --win"
+  },
+  "dependencies": {
+    "@invodesk/gst": "*",
+    "@invodesk/hardware": "*",
+    "@invodesk/sync": "*",
+    "@invodesk/types": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "app-builder-bin": "^5.0.0-alpha.10",
+    "electron": "^45.2.1",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.7.2"
+  }
+}

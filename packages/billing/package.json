@@ -1,0 +1,16 @@
+{
+  "name": "@invodesk/billing",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@invodesk/types": "*",
+    "@invodesk/gst": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

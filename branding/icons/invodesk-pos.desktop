@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=InvoDesk POS
+Comment=InvoDesk Native Retail POS Counter & Business Operations
+Exec=invodesk-pos %U
+Terminal=false
+Type=Application
+Icon=invodesk-pos
+StartupWMClass=invodesk-pos
+Categories=Office;Finance;

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  
+  <!-- Document Outline & Body -->
+  <path d="M 330 160
+           C 270 160, 220 210, 220 270
+           L 220 730
+           C 220 790, 270 840, 330 840
+           L 640 840
+           C 700 840, 750 790, 750 730
+           L 750 360
+           L 550 160
+           Z"
+        fill="transparent"
+        stroke="#172B25"
+        stroke-width="56"
+        stroke-linejoin="round" />
+
+  <!-- Dog-ear fold top-right -->
+  <path d="M 550 160
+           L 750 360
+           L 590 360
+           C 568 360, 550 342, 550 320
+           Z"
+        fill="#172B25" />
+
+  <!-- Document horizontal lines -->
+  <rect x="310" y="300" width="160" height="32" rx="16" fill="#172B25" />
+  <rect x="310" y="380" width="240" height="32" rx="16" fill="#172B25" />
+  <rect x="310" y="460" width="200" height="32" rx="16" fill="#172B25" />
+
+  <!-- Rising Bar Chart Pillars -->
+  <rect x="470" y="650" width="56" height="130" rx="14" fill="#172B25" />
+  <rect x="546" y="570" width="56" height="210" rx="14" fill="#172B25" />
+  <rect x="622" y="490" width="56" height="290" rx="14" fill="#172B25" />
+
+  <!-- Orbit Swoosh -->
+  <path d="M 140 700 C 100 850, 260 950, 460 910 C 660 870, 820 700, 840 510 C 844 470, 800 470, 790 510 C 750 680, 580 820, 390 830 C 260 836, 170 770, 190 690 C 196 660, 150 660, 140 700 Z" fill="#172B25" />
+</svg>

@@ -1,0 +1,29 @@
+{
+  "name": "@invodesk/web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000"
+  },
+  "dependencies": {
+    "@invodesk/billing": "*",
+    "@invodesk/gst": "*",
+    "@invodesk/inventory": "*",
+    "@invodesk/sync": "*",
+    "@invodesk/types": "*",
+    "lucide-react": "^0.474.0",
+    "next": "^14.2.24",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "typescript": "^5.7.2"
+  }
+}
