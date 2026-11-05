@@ -11,7 +11,8 @@
     "dev": "npm run dev --workspaces --if-present",
     "dev:server": "npm run dev --workspace=@invodesk/server",
     "dev:web": "npm run dev --workspace=@invodesk/web",
-    "build": "npm run build --workspaces --if-present",
+    "build:packages": "npm run build --workspace=@invodesk/types --workspace=@invodesk/gst --workspace=@invodesk/billing --workspace=@invodesk/inventory --workspace=@invodesk/sync --workspace=@invodesk/database",
+    "build": "npm run build:packages && npm run build --workspace=@invodesk/web",
     "postinstall": "prisma generate --schema=packages/database/prisma/schema.prisma || true",
     "test": "vitest run"
   },

@@ -19,7 +19,12 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@invodesk/types": ["../../packages/types/src/index.ts"],
+      "@invodesk/gst": ["../../packages/gst/src/index.ts"],
+      "@invodesk/billing": ["../../packages/billing/src/index.ts"],
+      "@invodesk/inventory": ["../../packages/inventory/src/index.ts"],
+      "@invodesk/sync": ["../../packages/sync/src/index.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
