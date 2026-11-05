@@ -3,9 +3,11 @@ import { PrismaClient, Prisma } from '@prisma/client';
 export * from '@prisma/client';
 
 // Ensure Prisma Decimal serializes to JSON as a standard numeric representation
-(Prisma.Decimal.prototype as any).toJSON = function () {
-  return Number(this.toString());
-};
+if (typeof Prisma !== 'undefined' && (Prisma as any)?.Decimal?.prototype) {
+  ((Prisma as any).Decimal.prototype as any).toJSON = function () {
+    return Number(this.toString());
+  };
+}
 
 declare global {
   // eslint-disable-next-line no-var

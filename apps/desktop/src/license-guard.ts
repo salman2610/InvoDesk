@@ -196,3 +196,4 @@ export class LicenseGuard {
     return JSON.parse(decrypted.toString('utf8'));
   }
 }
+
